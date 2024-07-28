@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Converter</title>
+    <link rel="stylesheet" href="coverter.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="temp_converter.html">Temperature Converter</a>
+        <a href="length_converter.html">Length Converter</a>
+        <a href="minute_converter.html">Minute Converter</a>
+        <a href="weight_converter.html">Weight Converter</a>
+    </div>
+    <div class="container">
+        <div class="converter">
+            <h1>Kilogram to Gram Converter</h1>
+            <div class="input-group">
+                <input type="number" id="kilograms" placeholder="Kilograms">
+                <button onclick="convertToGrams()">Convert to Grams</button>
+            </div>
+            <div class="input-group">
+                <input type="number" id="grams" placeholder="Grams">
+                <button onclick="convertToKilograms()">Convert to Kilograms</button>
+            </div>
+            <div id="result">Result will be displayed here</div>
+        </div>
+    </div>
+    <script>
+        function convertToGrams() {
+            let kilograms = document.getElementById('kilograms').value;
+            let grams = kilograms * 1000;
+            document.getElementById('result').innerText = kilograms + " Kilograms = " + grams + "Grams";
+        }
+
+        function convertToKilograms() {
+            let grams = document.getElementById('grams').value;
+            let kilograms = grams / 1000;
+            document.getElementById('result').innerText = grams + " Grams = " + kilograms + "Kilograms";
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>

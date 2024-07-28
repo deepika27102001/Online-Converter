@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length Converter</title>
+    <link rel="stylesheet" href="coverter.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="temp_converter.html">Temperature Converter</a>
+        <a href="length_converter.html">Length Converter</a>
+        <a href="minute_converter.html">Minute Converter</a>
+        <a href="weight_converter.html">Weight Converter</a>
+    </div>
+    <div class="container">
+        <div class="converter">
+            <h1>Length Converter</h1>
+            <div class="input-group">
+                <input type="number" id="centimeters" placeholder="Centimeters">
+                <button onclick="convertToInches()">Convert to Inches</button>
+            </div>
+            <div class="input-group">
+                <input type="number" id="inches" placeholder="Inches">
+                <button onclick="convertToCentimeters()">Convert to Centimeters</button>
+            </div>
+            <div id="result">Result will be displayed here</div>
+        </div>
+    </div>
+    <script>
+        function convertToInches() {
+            let centimeters = document.getElementById('centimeters').value;
+            let inches = centimeters / 2.54;
+            document.getElementById('result').innerText = centimeters + " Centimeter = " + inches + " Inches";;
+        }
+
+        function convertToCentimeters() {
+            let inches = document.getElementById('inches').value;
+            let centimeters = inches * 2.54;
+            document.getElementById('result').innerText = inches + " Inches = " + centimeters + " Centimeter";
+        }
+    </script>
+</body>
+</html>
